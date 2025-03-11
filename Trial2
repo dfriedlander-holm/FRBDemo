@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hidden Message: Fast Radio Burst Analogy</title>
+  <style>
+    /* Full-page, text-only styling */
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 2em;
+      background-color: #fff;
+      color: #000;
+    }
+    p {
+      margin-bottom: 1.2em;
+    }
+    /* The secret letters have a smooth transition when they change */
+    .secret-letter {
+      transition: color 0.5s ease;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const secretLetters = document.querySelectorAll('.secret-letter');
+      // Save original letter for each secret span
+      let originalTexts = Array.from(secretLetters, letter => letter.textContent);
+      
+      setInterval(function(){
+        // Blank out the secret letters
+        secretLetters.forEach(letter => {
+          letter.textContent = '';
+        });
+        // After 2 seconds, restore them
+        setTimeout(function(){
+          secretLetters.forEach((letter, index) => {
+            letter.textContent = originalTexts[index];
+          });
+        }, 2000);
+      }, 20000);
+    });
+  </script>
+</head>
+<body>
+  <h1>Exploring the Cosmos</h1>
+  <p>
+    Astronomy reveals a universe of wonders. Stars, galaxies, and nebulae fill the night sky with stories of cosmic evolution. The transient flashes of distant phenomena remind us that even the grandest events can be fleeting.
+  </p>
+  <p>
+    Among these cosmic events, fast radio bursts (FRBs) shine as mysterious, momentary signals. Their brief appearance and rapid disappearance are much like secret messages hidden within the vast text of the universe.
+  </p>
+  <p>
+    Sometimes, the universe speaks in puzzles. Consider this mnemonic sentence:
+  </p>
+  <p style="font-size: 1.2em; font-weight: bold;">
+    <span class="secret-letter">M</span>aNy 
+    <span class="secret-letter">O</span>bservation 
+    <span class="secret-letter">R</span>eveals 
+    <span class="secret-letter">G</span lorious 
+    <span class="secret-letter">A</span>nd 
+    <span class="secret-letter">N</span>ebulous 
+    <span class="secret-letter">R</span>adiations, 
+    <span class="secret-letter">O</span>nly 
+    <span class="secret-letter">C</span>aught 
+    <span class="secret-letter">K</span eeply 
+    <span class="secret-letter">S</span>ometimes.
+  </p>
+  <p>
+    Every 20 seconds, watch as these letters vanish momentarily—just as a fast radio burst flickers and fades from view. The missing letters, when read in order, form the secret message “Morgan Rocks.”
+  </p>
+  <p>
+    Let the mystery of the cosmos inspire your curiosity, and remember that sometimes the most profound messages are hidden in the briefest of flashes.
+  </p>
+</body>
+</html>
