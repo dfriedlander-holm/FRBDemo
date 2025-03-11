@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fast Radio Bursts Analogy</title>
+  <style>
+    /* Simple text-only styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      margin: 2em;
+    }
+    /* Initially hide the secret message */
+    #secret {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      font-weight: bold;
+      margin-top: 1em;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // After 1 second, show the secret message (simulate the burst)
+      setTimeout(function() {
+        var secret = document.getElementById('secret');
+        secret.style.opacity = 1;
+        // After 1.5 seconds, hide the message again
+        setTimeout(function() {
+          secret.style.opacity = 0;
+        }, 1500);
+      }, 1000);
+    });
+  </script>
+</head>
+<body>
+  <h1>Welcome to the FRB Analogy</h1>
+  <p>Keep an eye on the page—sometimes, you might catch a fleeting burst of information.</p>
+  <div id="secret">Secret Message: FRB Detected!</div>
+  <p>This brief flash represents the transient nature of fast radio bursts.</p>
+</body>
+</html>
+
